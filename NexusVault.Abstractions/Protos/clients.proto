@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "NexusVault.Abstractions";
+
+import "google/protobuf/timestamp.proto";
+
+package nexusvault.abstractions.clients;
+
+message VaultClient {
+  string client_id = 1;
+  string full_name = 2;
+  string email = 3;
+  string phone_number = 4;
+  bool is_active = 5;
+  google.protobuf.Timestamp registered_at = 6;
+}
+
+message RegisterClientRequest {
+  string full_name = 1;
+  string email = 2;
+  string phone_number = 3;
+}
+
+message ClientReply {
+  VaultClient client = 1;
+}
+
+message FetchClientRequest {
+  string client_id = 1;
+}
+
+service ClientManagerService {
+  rpc RegisterClient (RegisterClientRequest) returns (ClientReply);
+  rpc FetchClient (FetchClientRequest) returns (ClientReply);
+}

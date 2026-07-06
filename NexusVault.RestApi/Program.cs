@@ -69,6 +69,28 @@ builder.Services.AddGrpcClient<DeviceRegistryService.DeviceRegistryServiceClient
     o.Address = new Uri(builder.Configuration["GrpcEndpoints:DeviceServiceUrl"] ?? "http://localhost:5062");
 }).EnableCallContextPropagation();
 
+builder.Services.AddGrpcClient<ClientManagerService.ClientManagerServiceClient>(o =>
+{
+    o.Address = new Uri(builder.Configuration["GrpcEndpoints:RecordServiceUrl"] ?? "http://localhost:5240");
+}).ConfigureChannel(o =>
+{
+    o.UnsafeUseInsecureChannelCallCredentials = true;
+})
+.AddCallCredentials((context, metadata, serviceProvider) =>
+{
+    var httpContext = serviceProvider.GetRequiredService<IHttpContextAccessor>().HttpContext;
+
+    if (httpContext != null && httpContext.Request.Headers.TryGetValue("Authorization", out var authHeader))
+    {
+        var token = authHeader.FirstOrDefault();
+        if (!string.IsNullOrEmpty(token))
+        {
+            metadata.Add("Authorization", token);
+        }
+    }
+    return Task.CompletedTask;
+});
+
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 

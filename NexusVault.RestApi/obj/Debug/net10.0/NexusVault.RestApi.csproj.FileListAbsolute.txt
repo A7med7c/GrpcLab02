@@ -50,4 +50,3 @@ C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.RestApi\obj\Debug\net10.0
 C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.RestApi\obj\Debug\net10.0\NexusVault.RestApi.pdb
 C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.RestApi\obj\Debug\net10.0\NexusVault.RestApi.genruntimeconfig.cache
 C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.RestApi\obj\Debug\net10.0\ref\NexusVault.RestApi.dll
-C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.RestApi\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

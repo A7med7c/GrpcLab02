@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NexusVault.Abstractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b583d472bf74729cbef32aab09ceb7da5b11c928")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e60461081bcada28541606f250c7b7490875ed01")]
 [assembly: System.Reflection.AssemblyProductAttribute("NexusVault.Abstractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NexusVault.Abstractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

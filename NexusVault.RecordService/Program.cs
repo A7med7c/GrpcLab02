@@ -31,6 +31,7 @@ builder.Services.AddGrpc(options =>
 builder.Services.AddGrpcReflection();
 
 builder.Services.AddSingleton<IRecordStore, InMemoryRecordStore>();
+builder.Services.AddSingleton<IClientRepository, InMemoryClientRepository>();
 
 var app = builder.Build();
 
@@ -38,6 +39,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapGrpcService<RecordCatalogHandler>();
+app.MapGrpcService<ClientManagerHandler>();
 
 if (app.Environment.IsDevelopment())
 {
