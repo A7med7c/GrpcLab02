@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="NexusVault.Abstractions/NexusVault.Abstractions.csproj" Id="e502c96f-8a0c-428a-a05a-b402b009819d" />
+  <Project Path="NexusVault.RestApi/NexusVault.RestApi.csproj" Id="09afc25a-31f4-4cf3-ae5c-5b88c2532353" />
+  <Project Path="NexusVault.Sandbox/NexusVault.Sandbox.csproj" />
+  <Project Path="NexusVault.RecordService/NexusVault.RecordService.csproj" />
+  <Project Path="NexusVault.DeviceService/NexusVault.DeviceService.csproj" Id="9e4a3e49-2dc9-469f-8974-12da4d73d6a1" />
+</Solution>

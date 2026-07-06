@@ -1,0 +1,57 @@
+syntax="proto3";
+
+option csharp_namespace = "NexusVault.Abstractions";
+
+import "google/protobuf/timestamp.proto";
+
+package nexusvault.abstractions.devices;
+
+enum DeviceCategory {
+  DEVICE_CATEGORY_UNKNOWN = 0;
+  DEVICE_CATEGORY_COMPACT = 1;
+  DEVICE_CATEGORY_HEAVY = 2;
+  DEVICE_CATEGORY_PORTABLE = 3;
+}
+
+message RegisteredDevice {
+  string device_id = 1;
+  string serial_code = 2;
+  DeviceCategory category = 3;
+  float max_load_kg = 4;
+  bool is_online = 5;
+}
+
+message EnrollDeviceRequest {
+  string serial_code = 1;
+  DeviceCategory category = 2;
+  float max_load_kg = 3;
+}
+
+message DeviceReply {
+  RegisteredDevice device = 1;
+}
+
+message FetchDeviceRequest {
+  string device_id = 1;
+}
+
+message DeviceMetrics {
+  string device_id = 1;
+  double latitude = 2;
+  double longitude = 3;
+  float velocity_kmh = 4;
+  google.protobuf.Timestamp captured_at = 5;
+}
+
+message DeviceMetricsAck {
+  string device_id = 1;
+  google.protobuf.Timestamp captured_at = 2;
+  bool accepted = 3;
+}
+
+service DeviceRegistryService {
+  rpc EnrollDevice (EnrollDeviceRequest) returns (DeviceReply);
+  rpc FetchDevice (FetchDeviceRequest) returns (DeviceReply);
+
+  rpc StreamDeviceMetrics (stream DeviceMetrics) returns (stream DeviceMetricsAck);
+}

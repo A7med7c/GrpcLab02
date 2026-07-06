@@ -1,0 +1,117 @@
+syntax="proto3";
+
+option csharp_namespace = "NexusVault.Abstractions";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/wrappers.proto";
+
+package nexusvault.abstractions.records;
+
+enum ProcessingState {
+  PROCESSING_STATE_UNKNOWN = 0;
+  PROCESSING_STATE_QUEUED = 1;
+  PROCESSING_STATE_ACTIVE = 2;
+  PROCESSING_STATE_COMPLETED = 3;
+  PROCESSING_STATE_ABORTED = 4;
+}
+
+message RecordLineItem {
+  string item_label = 1;
+  int32 unit_count = 2;
+  double mass_kg = 3;
+}
+
+message SensitivePayload {
+  bool requires_extra_cushioning = 1;
+}
+
+message TemperatureControlledPayload {
+  float ceiling_celsius = 1;
+}
+
+message DefaultPayload {
+}
+
+message VaultRecord {
+  string record_id = 1;
+  string owner_name = 2;
+  repeated RecordLineItem line_items = 3;
+  ProcessingState state = 4;
+  map<string, string> metadata = 5;
+  google.protobuf.Timestamp submitted_at = 6;
+  google.protobuf.Duration estimated_duration = 7;
+  google.protobuf.StringValue notes = 8;
+
+  oneof payload_kind {
+    SensitivePayload sensitive_payload = 9;
+    TemperatureControlledPayload temperature_payload = 10;
+    DefaultPayload default_payload = 11;
+  }
+}
+
+message CreateRecordRequest {
+  string owner_name = 1;
+  repeated RecordLineItem line_items = 2;
+  map<string, string> metadata = 3;
+  google.protobuf.StringValue notes = 4;
+
+  oneof payload_kind {
+    SensitivePayload sensitive_payload = 5;
+    TemperatureControlledPayload temperature_payload = 6;
+    DefaultPayload default_payload = 7;
+  }
+}
+
+message RecordReply {
+  VaultRecord record = 1;
+}
+
+message FetchRecordRequest {
+  string record_id = 1;
+}
+
+message UpdateProcessingStateRequest {
+  string record_id = 1;
+  ProcessingState new_state = 2;
+}
+
+message ListRecordsRequest {
+  ProcessingState state_filter = 1;
+}
+
+message ListRecordsReply {
+  repeated VaultRecord records = 1;
+}
+
+message MonitorRecordRequest {
+  string record_id = 1;
+}
+
+message RecordStateNotification {
+  string record_id = 1;
+  ProcessingState state = 2;
+  string summary = 3;
+  google.protobuf.Timestamp changed_at = 4;
+}
+
+message BulkUpdateProcessingStateRequest {
+  string record_id = 1;
+  ProcessingState new_state = 2;
+}
+
+message BulkUpdateProcessingStateReply {
+  int32 updated_count = 1;
+  int32 total_received = 2;
+  repeated RecordStateNotification notifications = 3;
+}
+
+service RecordCatalogService {
+  rpc CreateRecord (CreateRecordRequest) returns (RecordReply);
+  rpc FetchRecord (FetchRecordRequest) returns (RecordReply);
+  rpc UpdateProcessingState (UpdateProcessingStateRequest) returns (RecordReply);
+  rpc ListRecords (ListRecordsRequest) returns (ListRecordsReply);
+
+  rpc MonitorRecordState (MonitorRecordRequest) returns (stream RecordStateNotification);
+  rpc UpdateBulkProcessingState (stream BulkUpdateProcessingStateRequest) returns (BulkUpdateProcessingStateReply);
+}

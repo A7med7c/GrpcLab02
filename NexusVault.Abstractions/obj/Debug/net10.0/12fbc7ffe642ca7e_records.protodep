@@ -1,0 +1,5 @@
+obj\Debug\net10.0\Protos/Records.cs \
+obj\Debug\net10.0\Protos/RecordsGrpc.cs: C:/Users/Ahmed Ragab/.nuget/packages/grpc.tools/2.81.1/build/native/include/google/protobuf/timestamp.proto\
+ C:/Users/Ahmed Ragab/.nuget/packages/grpc.tools/2.81.1/build/native/include/google/protobuf/duration.proto\
+ C:/Users/Ahmed Ragab/.nuget/packages/grpc.tools/2.81.1/build/native/include/google/protobuf/wrappers.proto\
+ Protos/records.proto

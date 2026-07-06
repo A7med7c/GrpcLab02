@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "B4GvusIYOps=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ahmed Ragab\\source\\repos\\GrpcLab02\\NexusVault.RecordService\\NexusVault.RecordService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\google.protobuf\\3.35.1\\google.protobuf.3.35.1.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\grpc.aspnetcore.server\\2.80.0\\grpc.aspnetcore.server.2.80.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.80.0\\grpc.aspnetcore.server.clientfactory.2.80.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\grpc.aspnetcore.server.reflection\\2.64.0\\grpc.aspnetcore.server.reflection.2.64.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\grpc.core.api\\2.80.0\\grpc.core.api.2.80.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\grpc.net.client\\2.80.0\\grpc.net.client.2.80.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\grpc.net.clientfactory\\2.80.0\\grpc.net.clientfactory.2.80.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\grpc.net.common\\2.80.0\\grpc.net.common.2.80.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\grpc.reflection\\2.64.0\\grpc.reflection.2.64.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\10.0.9\\microsoft.aspnetcore.authentication.jwtbearer.10.0.9.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.0.1\\microsoft.identitymodel.abstractions.8.0.1.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.0.1\\microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\microsoft.identitymodel.logging\\8.0.1\\microsoft.identitymodel.logging.8.0.1.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\microsoft.identitymodel.protocols\\8.0.1\\microsoft.identitymodel.protocols.8.0.1.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\8.0.1\\microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.1\\microsoft.identitymodel.tokens.8.0.1.nupkg.sha512",
+    "C:\\Users\\Ahmed Ragab\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

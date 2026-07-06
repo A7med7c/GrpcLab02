@@ -1,0 +1,13 @@
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\bin\Debug\net10.0\NexusVault.Abstractions.deps.json
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\bin\Debug\net10.0\NexusVault.Abstractions.dll
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\bin\Debug\net10.0\NexusVault.Abstractions.pdb
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\NexusVault.Abstractions.csproj.AssemblyReference.cache
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\NexusVault.Abstractions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\NexusVault.Abstractions.AssemblyInfoInputs.cache
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\NexusVault.Abstractions.AssemblyInfo.cs
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\NexusVault.Abstractions.csproj.CoreCompileInputs.cache
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\NexusVault.Abstractions.sourcelink.json
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\NexusVault.Abstractions.dll
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\refint\NexusVault.Abstractions.dll
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\NexusVault.Abstractions.pdb
+C:\Users\Ahmed Ragab\source\repos\GrpcLab02\NexusVault.Abstractions\obj\Debug\net10.0\ref\NexusVault.Abstractions.dll
